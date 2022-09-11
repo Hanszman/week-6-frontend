@@ -1,3 +1,9 @@
+# week-6-frontend
+
+FrontEnd do projeto da Semana Omini Stack do curso de Node.js, React, React Native e MongoDB.
+
+------ // ------
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
