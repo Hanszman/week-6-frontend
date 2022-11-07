@@ -15,7 +15,8 @@ export default class Box extends Component {
     // Método que é disparado assim que o componente é renderizado na tela
     async componentDidMount() {
         const box = this.props.match.params.id; // Esse comando do props serve para pegar os parâmetros que vêm da rota, nesse caso o id da box
-        const response = api.get(`boxes/${box}`); // Chamada da rota para recuperar essa box da api
+        const response = await api.get(`boxes/${box}`); // Chamada da rota para recuperar essa box da api
+        this.setState({ box: response.data }); // Função do React para alterar estados do box na página
     }
 
     // Renderização do HTML na página
@@ -24,7 +25,7 @@ export default class Box extends Component {
             <div id="box-container">
                 <header>
                     <img src={logo} alt=""/>
-                    <h1>Rocketseat</h1>
+                    <h1>{this.state.box.title}</h1>
                 </header>
                 <ul>
                     <li>
