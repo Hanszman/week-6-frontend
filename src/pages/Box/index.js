@@ -29,14 +29,14 @@ export default class Box extends Component {
                 </header>
                 <ul>
                     <li>
-                        <a className="fileInfo" href="">
+                        <a className="fileInfo" href="/">
                             <MdInsertDriveFile size={24} color="#A5Cfff"/>
                             <strong>Desafio.pdf</strong>
                         </a>
                         <span>Há 3 minutos atrás</span>
                     </li>
                     <li>
-                        <a className="fileInfo" href="">
+                        <a className="fileInfo" href="/">
                             <MdInsertDriveFile size={24} color="#A5Cfff"/>
                             <strong>Desafio.pdf</strong>
                         </a>

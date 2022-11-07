@@ -1,5 +1,6 @@
 // Importações
 import React, { Component } from 'react';
+import { useNavigate } from 'react-router-dom';
 import api from '../../services/api';
 import logo from '../../assets/logo.png';
 import './styles.css';
@@ -17,7 +18,9 @@ export default class Main extends Component {
         const response = await api.post('/boxes', { // Chamada da rota de salvar boxes da api
             title: this.state.newBox // Body da requisição
         });
-        this.props.history.push(`/box/${response.data._id}`); // O props serve para acessar as propriedades do componente. O history serve para navegar o usuário para alguma tela. Nesse caso está redirecionando para a rota box passando o id que veio da requisição acima
+        // O props serve para acessar as propriedades do componente
+        const navigate = useNavigate(); // O navigate serve para navegar o usuário para alguma tela
+        navigate(`/box/${response.data._id}`); // Nesse caso está redirecionando para a rota box passando o id que veio da requisição acima
     };
 
     // Função utilizada no onChange do Form
