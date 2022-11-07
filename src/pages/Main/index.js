@@ -22,8 +22,8 @@ export default class Main extends Component {
     };
 
     // Renderização do HTML na página
-    render() {
-        return (
+    render() { // O render retorna o conteúdo html e é o único método obrigatório do componente
+        return ( // Essa sintaxe chama jsx e é uma mistura de javascript com xml
             <div id="main-container">
                 <form onSubmit={this.handleSubmit} action="">
                     <img src={logo} alt="" />
