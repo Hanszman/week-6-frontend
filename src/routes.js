@@ -9,7 +9,8 @@ import Box from './pages/Box';
 const Routes = () => ( // Existem dois tipos de componente no React: o statefull (armazena mudança de estado) e o stateless (não armazena mudança de estado). Esse é um componente stateless, por isso pode ser implementado em formato de função de forma abreviada (Arrow Function)
     <BrowserRouter>
         <Switch>
-            <Route path ="/" component={Main}/>
+            <Route path="/" exact component={Main}/>
+            <Route path="/box/:id" component={Box}/>
         </Switch>
     </BrowserRouter>
 );

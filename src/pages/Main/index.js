@@ -8,7 +8,7 @@ import './styles.css';
 export default class Main extends Component {
     // Existem dois tipos de componente no React: o statefull (armazena mudança de estado) e o stateless (não armazena mudança de estado). Esse é um componente statefull, por isso deve ser implementado dessa forma:
     state = { // Variável para armazenar os estados da página
-        newBox: '',
+        newBox: ''
     };
     
     // Função utilizada no onSubmit do Form
@@ -17,7 +17,7 @@ export default class Main extends Component {
         const response = await api.post('boxes', { // Chamada da rota de salvar boxes da api
             title: this.state.newBox // Body da requisição
         });
-        console.log(response.data);
+        this.props.history.push(`/box/${response.data._id}`); // O props serve para acessar as propriedades do componente. O history serve para navegar o usuário para alguma tela. Nesse caso está redirecionando para a rota box passando o id que veio da requisição acima
     };
 
     // Função utilizada no onChange do Form
