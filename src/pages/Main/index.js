@@ -6,8 +6,8 @@ import './styles.css';
 
 // Exportação da Classe do Componente Principal da Aplicação (Main): Está sendo chamado no App.js
 export default class Main extends Component {
-    // Variável para armazenar os estados da página
-    state = {
+    // Existem dois tipos de componente no React: o statefull (armazena mudança de estado) e o stateless (não armazena mudança de estado). Esse é um componente statefull, por isso deve ser implementado dessa forma:
+    state = { // Variável para armazenar os estados da página
         newBox: '',
     };
     
