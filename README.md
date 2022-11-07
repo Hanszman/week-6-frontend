@@ -1,7 +1,7 @@
 # week-6-frontend
 
 FrontEnd do projeto da Semana Omini Stack do curso de Node.js, React, React Native e MongoDB.
-Vídeo do Dia 3, parei no tempo: 00:33:41.
+Vídeo do Dia 3, parei no tempo: 00:36:18.
 
 ------ // ------
 

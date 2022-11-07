@@ -12,8 +12,12 @@ export default class Main extends Component {
     };
     
     // Função utilizada no onSubmit do Form
-    handleSbumit = () => {
-        
+    handleSubmit = async (event) => { // Método declarado com async para ser possível a utilização do await e funcionar de forma síncrona
+        event.preventDefault(); // Serve para prevenir o comportamento padrão do onSubmit no Form, de forma que a página não atualize no envio do formulário
+        const response = await api.post('boxes', { // Chamada da rota de salvar boxes da api
+            title: this.state.newBox // Body da requisição
+        });
+        console.log(response.data);
     };
 
     // Função utilizada no onChange do Form
